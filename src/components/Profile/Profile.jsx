@@ -1,3 +1,5 @@
+import css from "./Profile.module.css";
+
 export default function Profile({
   profileUser: {
     username,
@@ -8,26 +10,26 @@ export default function Profile({
   },
 }) {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
+    <div className={css.container}>
+      <div className={css.profile}>
+        <img className={css.images} src={avatar} alt="User avatar" />
+        <p className={css.username}>{username}</p>
+        <p className={css.tag}>{tag}</p>
+        <p className={css.location}>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={css.list}>
+        <li className={css.item}>
           <span>Followers</span>
-          <span>{followers}</span>
+          <span className={css.items}>{followers}</span>
         </li>
-        <li>
+        <li className={css.item}>
           <span>Views</span>
-          <span>{views}</span>
+          <span className={css.items}>{views}</span>
         </li>
-        <li>
+        <li className={css.item}>
           <span>Likes</span>
-          <span>{likes}</span>
+          <span className={css.items}>{likes}</span>
         </li>
       </ul>
     </div>
